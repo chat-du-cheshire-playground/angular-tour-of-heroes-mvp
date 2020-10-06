@@ -15,6 +15,7 @@ import { HeroesComponent } from './heroes/heroes.component';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
 import { MessagesComponent } from './messages/messages.component';
 import { DashboardContainerComponent } from './dashboard/dashboard-container.component';
+import { HeroesContainerComponent } from './heroes/heroes-container.component';
 
 @NgModule({
   imports: [
@@ -37,7 +38,8 @@ import { DashboardContainerComponent } from './dashboard/dashboard-container.com
     HeroDetailComponent,
     MessagesComponent,
     HeroSearchComponent,
-    DashboardContainerComponent
+    DashboardContainerComponent,
+    HeroesContainerComponent
   ],
   bootstrap: [ AppComponent ]
 })

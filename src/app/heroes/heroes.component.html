@@ -5,7 +5,7 @@
     <input #heroName />
   </label>
   <!-- (click) passes input value to add() and then clears the input -->
-  <button (click)="add(heroName.value); heroName.value=''">
+  <button (click)="onAdd(heroName.value); heroName.value=''">
     add
   </button>
 </div>
@@ -16,12 +16,12 @@
       <span class="badge">{{hero.id}}</span> {{hero.name}}
     </a>
     <button class="delete" title="delete hero"
-      (click)="delete(hero)">x</button>
+      (click)="onDelete(hero)">x</button>
   </li>
 </ul>
 
 
-<!-- 
+<!--
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that
 can be found in the LICENSE file at http://angular.io/license
