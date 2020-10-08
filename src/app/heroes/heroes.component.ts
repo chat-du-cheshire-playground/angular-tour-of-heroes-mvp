@@ -2,6 +2,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 
 import {Hero} from '../hero';
 import {HeroService} from '../hero.service';
+import {FormControl} from '@angular/forms';
 
 @Component({
   selector: 'app-heroes',
@@ -14,8 +15,11 @@ export class HeroesComponent {
   @Output() add = new EventEmitter<string>();
   @Output() remove = new EventEmitter<Hero>();
 
-  onAdd(name: string): void {
-    name = name.trim();
+  input = new FormControl()
+
+  onAdd(): void {
+    const name = this.input.value.trim();
+    this.input.setValue('')
     if (!name) {
       return;
     }
